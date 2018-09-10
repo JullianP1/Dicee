@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var randomDiceIndex : Int = 0;
 
     @IBOutlet weak var diceImageView1: UIImageView!
     
