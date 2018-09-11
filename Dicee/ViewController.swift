@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDiceImages()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,17 +30,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-    randomDiceIndex1 = Int(arc4random_uniform(6))
-    randomDiceIndex2 = Int(arc4random_uniform(6))
-        
+        updateDiceImages()
+    }
+    
+    func updateDiceImages() {
+        randomDiceIndex1 = Int(arc4random_uniform(6))
+        randomDiceIndex2 = Int(arc4random_uniform(6))
         diceImageView1.image = UIImage(named: diceArray[randomDiceIndex1])
         diceImageView2.image = UIImage(named: diceArray[randomDiceIndex1])
-        
-    }
-    func updateDiceImages() {
-        
     }
     
 }
