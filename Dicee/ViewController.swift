@@ -38,5 +38,9 @@ class ViewController: UIViewController {
         diceImageView2.image = UIImage(named: diceArray[randomDiceIndex1])
         
     }
+    func updateDiceImages() {
+        
+    }
+    
 }
 
